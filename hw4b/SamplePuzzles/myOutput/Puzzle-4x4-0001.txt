@@ -1,0 +1,9 @@
+2 - 3 1 
+1 3 - 4 
+3 1 4 - 
+- 2 1 3 
+SOLVED: 2 4 3 1 
+1 3 2 4 
+3 1 4 2 
+4 2 1 3 
+TIME ELAPSED: 207 MILLISECONDS; STRATEGIES USED: OnlyChoiceMethod TIMES USED: 2

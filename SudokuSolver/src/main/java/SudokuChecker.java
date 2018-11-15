@@ -1,0 +1,93 @@
+import java.util.ArrayList;
+import java.util.HashMap;
+
+public class SudokuChecker {
+    public static boolean checkCellsFilled(String[][] board){
+        for(int i = 0; i <board.length;i++){
+            for(int j = 0; j <board.length;j++) {
+                if (board[i][j].equals("-") || board[i][j].equals("")||(board[i][j].split("-").length>1)) {
+                    return Boolean.FALSE;
+                }
+                }
+            }
+        return Boolean.TRUE;
+    }
+    public static boolean checkPossibleValue(String[][] board,HashMap<String,String> possibleValues){
+        for (int i = 0; i<board.length;i++){
+            for (int j = 0; j<board.length;j++){
+                if(!board[i][j].equals("-")){
+                    if(!possibleValues.containsKey(board[i][j])){
+                        return Boolean.FALSE;
+                    }
+                }
+            }
+        }
+        return Boolean.TRUE;
+    }
+    public static boolean validSudoku(String[][] board) {
+        int squareXStartingIndex = 0;
+        int squareYStartingIndex = 0;
+        int sizeOfSquare = (int)Math.sqrt(board.length);
+        for(int i = 0; i <board.length;i++){
+            if(i%sizeOfSquare == 0){
+                squareXStartingIndex = i;
+            }
+            for (int j = 0; j< board.length;j++){
+                if(j%sizeOfSquare == 0){
+                    squareYStartingIndex = j;
+                }
+                if(!board[i][j].equals("-")){
+                    if(!checkValidEntry(board,i,j,board[i][j],sizeOfSquare,squareXStartingIndex,squareYStartingIndex)){
+                        return Boolean.FALSE;
+                    }
+                }
+
+            }
+        }
+        return Boolean.TRUE;
+    }
+    public static boolean checkNotEmpty(String[][] board){
+        for(int i = 0; i <board.length;i++){
+            for(int j = 0; j <board.length;j++) {
+                if (board[i][j].equals("")) {
+                    return Boolean.FALSE;
+                }
+            }
+        }
+        return Boolean.TRUE;
+    }
+    public static boolean checkValidEntry(String[][] board,int i,int j,String value,int squareSize,int squareX,int squareY){
+        if(value.equals("")){
+            return  Boolean.FALSE;
+        }
+        String[] myRow = board[i];
+        String [] myCol = new String[board.length];
+        for(int k = 0; k < board.length;k++){
+            myCol[k] = board[k][j];
+        }
+        for(int l = 0;l<myRow.length;l++){
+
+            if(myRow[l].equals(value)&&l!=j){
+
+                System.out.println("another one in the row");
+                return Boolean.FALSE;
+            }
+            if(myCol[l].equals(value)&&l!=i){
+                System.out.println("another one in the col");
+                return Boolean.FALSE;
+
+            }
+        }
+        for(int m = squareX;m<squareSize;m++){
+            for(int n = squareY;n<squareSize;n++){
+                if(board[m][n].equals(value)&&(m!=i||n!=j)){
+                    System.out.println("another one in the box");
+                    return Boolean.FALSE;
+                }
+
+            }
+        }
+
+        return Boolean.TRUE;
+    }
+}

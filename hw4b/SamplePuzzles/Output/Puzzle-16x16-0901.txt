@@ -1,0 +1,63 @@
+16
+1 2 3 4 5 6 7 8 9 A B C D E F G
+- - - - 1 - 3 - 5 - 7 - 9 - B C
+- - A - - - E - 1 - 3 - 5 6 - 8
+8 - 6 - - 9 - B - D - F - - 3 -
+4 - 2 - 8 - 6 - C - A - - - E -
+F - D - 4 - 2 - - - - 7 - 9 A -
+- - 9 - - G - E - - 2 3 - 5 - 7
+7 - - - B - 9 - F - D - 4 - - 3
+- 4 - 2 - 8 - 6 - - 9 - - G - E
+- F - - 3 4 - 2 - - 5 - - C - A
+A - - 9 - F - D - - 1 - 7 - - 6
+6 - 8 - - - - 9 - F - - 3 - 1 2
+2 - 4 - 6 - 8 - A - - - E - - D
+D - - - - 3 - 1 - 7 - 5 A - C -
+9 A - C - - - - 2 - 4 - 6 - 8 -
+5 - - 8 - A - - D - F - - 3 - 1
+1 - 3 - - 6 - 8 - - - C - - F G
+
+Multiple Solutions
+E D F G 1 2 3 4 5 6 7 8 9 A B C
+C 9 A B F D E G 1 2 3 4 5 6 7 8
+8 5 6 7 A 9 C B E D G F 1 2 3 4
+4 1 2 3 8 5 6 7 C 9 A B G D E F
+F G D E 4 1 2 3 6 5 8 7 C 9 A B
+B C 9 A D G F E 4 1 2 3 8 5 6 7
+7 8 5 6 B C 9 A F E D G 4 1 2 3
+3 4 1 2 5 8 7 6 B C 9 A F G D E
+G F E D 3 4 1 2 7 8 5 6 B C 9 A
+A B C 9 E F G D 3 4 1 2 7 8 5 6
+6 7 8 5 C B A 9 G F E D 3 4 1 2
+2 3 4 1 6 7 8 5 A B C 9 E F G D
+D 2 B F G 3 4 1 8 7 6 5 A E C 9
+9 A G C 7 E D F 2 3 4 1 6 B 8 5
+5 6 7 8 9 A B C D G F E 2 3 4 1
+1 E 3 4 2 6 5 8 9 A B C D 7 F G
+
+E D F G 1 2 3 4 5 6 7 8 9 A B C
+C 9 A B F D E G 1 2 3 4 5 6 7 8
+8 5 6 7 A 9 C B E D G F 1 2 3 4
+4 1 2 3 8 5 6 7 C 9 A B G D E F
+F G D E 4 1 2 3 6 5 8 7 C 9 A B
+B C 9 A D G F E 4 1 2 3 8 5 6 7
+7 8 5 6 B C 9 A F E D G 4 1 2 3
+3 4 1 2 5 8 7 6 B C 9 A F G D E
+G F E D 3 4 1 2 7 8 5 6 B C 9 A
+A B C 9 E F G D 3 4 1 2 7 8 5 6
+6 7 8 5 C B A 9 G F E D 3 4 1 2
+2 3 4 1 6 7 8 5 A B C 9 E F G D
+D E G F 2 3 4 1 8 7 6 5 A B C 9
+9 A B C G E D F 2 3 4 1 6 7 8 5
+5 6 7 8 9 A B C D G F E 2 3 4 1
+1 2 3 4 7 6 5 8 9 A B C D E F G
+
+
+Total time: 00:00:00.0160000
+
+Strategy             Uses       Time
+Apply Changes        122        00:00:00.0010000
+Only One Possibility 54         00:00:00
+Only One Place       50         00:00:00.0140000
+Twins                5          00:00:00
+Guess                17         00:00:00.0010000

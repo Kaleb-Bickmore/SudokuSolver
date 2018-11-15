@@ -1,0 +1,9 @@
+B - C A 
+A C - D 
+C A D - 
+- B A C 
+SOLVED: B D C A 
+A C B D 
+C A D B 
+D B A C 
+TIME ELAPSED: 417 MILLISECONDS; STRATEGIES USED: OnlyChoiceMethod OnlyChoiceMethod 

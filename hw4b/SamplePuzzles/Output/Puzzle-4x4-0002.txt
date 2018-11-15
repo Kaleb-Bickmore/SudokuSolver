@@ -1,0 +1,23 @@
+4
+A B C D
+B - C A
+A C - D
+C A D -
+- B A C
+
+
+Solved
+B D C A
+A C B D
+C A D B
+D B A C
+
+
+Total time: 00:00:00
+
+Strategy             Uses       Time
+Apply Changes        2          00:00:00
+Only One Possibility 1          00:00:00
+Only One Place       0          00:00:00
+Twins                0          00:00:00
+Guess                0          00:00:00

@@ -1,0 +1,90 @@
+25
+1 2 3 4 5 6 7 8 9 A B C D E F G H I J K L M N O P
+4 9 - 1 3 6 7 - 8 - - - - D - - - - - - - - - - -
+- 6 3 5 - - - 9 - - A - - - - - 5 - - - 2 9 3 6 4
+5 - - - 2 9 3 6 4 - - - B - - - - 2 - 3 1 - - 4 -
+- 2 - 3 1 - - 4 - - - - - - - - - - - - - - - - -
+- 7 4 - - - 2 1 - - - F - - - - - - - - - - - - -
+- - 1 - 6 4 - 8 - - - - - - 2 - - - - - - - - - -
+1 8 6 9 - - - 2 5 - - - - - - - H - - - - - - - -
+- 4 - - 5 1 8 3 - D - - 2 - - - - - J - - - - - -
+3 - 9 4 8 - - 7 - - - - - - - - - - - - - - - - -
+4 9 - 1 3 6 7 - 8 - - - - D - - - - - - - - - - -
+- 6 3 5 - - - 9 - - A - - - - - - - - L - - - - -
+5 - - - 2 9 3 6 4 - - - B - - - - - - - - - - - -
+- 2 - 3 1 - - 4 - - - - - - - - - - - - - - - - -
+- 7 4 - - - 2 1 - - - F - - - - - - - - - - - - -
+- - 1 - 6 4 - 8 - - - - - - 2 - - - - - - - - - -
+1 8 6 9 - - - 2 5 - - - - - - - - - - - - - - - -
+4 9 - 1 3 6 7 - 8 - - - - D - - - - - - - - - - -
+- 6 3 5 - - - 9 - - A - - - - - 5 - - - 2 9 3 6 4
+5 - - - 2 9 3 6 4 - - - B - - - - 2 - 3 1 - - 4 -
+- 2 - 3 1 - - 4 - - - - - - - - - - - - - - - - -
+- 7 4 - - - 2 1 - - - F - - - - - - - - - - - - -
+- - 1 - 6 4 - 8 - - - - - - 2 - - - - - - - - - -
+1 8 6 9 - - - 2 5 - - - - - - - H - - - - - - - -
+- 4 - - 5 1 8 3 - D - - 2 - - - - - J - - - - - -
+3 - 9 4 8 - - 7 - - - - - - - - - - - - - - - - -
+
+Multiple Solutions
+4 9 G 1 3 6 7 H 8 I 2 E 5 D C J A K B F L M N O P
+F 6 J 5 K N O 9 P B A 1 G H I D E L M C 2 7 3 8 4
+I L M N 2 F 3 G 4 C J K B O P 7 6 8 9 H 1 5 A D E
+8 A D H C J K L M E 3 4 7 9 N 2 1 5 O P B 6 F G I
+E 7 O P B D 2 1 A 5 6 F 8 L M 3 G I N 4 9 C H J K
+K N 1 J 6 4 H 8 I 9 P 7 3 B 2 L C F G 5 D A M E O
+O 8 7 9 M A B 2 5 6 F C L I D K H 4 E 1 J N G P 3
+P 4 F G 5 1 C 3 E D K 8 O 6 9 M 2 A J N 7 I B L H
+3 I E C L K M 7 J F G N H 4 A O B P 6 D 5 2 8 1 9
+2 H B D A O N P L G 1 5 J M E 8 9 3 7 I F 4 6 K C
+7 D 3 6 9 2 A I 1 M E B C G J H P O F L N K 4 5 8
+5 G 8 B H 9 F 6 3 O 4 D 1 P L E N C K 2 M J I A 7
+L 2 A E 1 8 5 4 K P M I N 7 6 9 D G 3 J O B C H F
+M J 4 F O H D C G N 5 A 9 8 K 6 7 1 I B E L P 3 2
+N K C I P L E B 7 J H 3 F 2 O 5 4 M 8 A G D 1 9 6
+1 B 6 8 4 P I M 9 K 7 J A N H G L E D O 3 F 2 C 5
+9 C 5 K F B G D 2 7 L P E 3 1 A 8 6 4 M H O J I N
+A E 2 L J C 1 N H 3 D O M F 4 I 5 B P K 8 9 7 6 G
+D M H O 7 5 J A 6 8 B 9 I C G N F 2 1 3 K P E 4 L
+G P I 3 N E 4 F O L 8 2 6 K 5 C J 7 H 9 A 1 D B M
+6 1 K 2 D 7 L E C 4 9 M P 5 F B 3 H A 8 I G O N J
+B 3 L A E I 9 J F 2 O 6 4 1 8 P M N 5 G C H K 7 D
+C 5 N M G 3 P K B A I H D E 7 F O J L 6 4 8 9 2 1
+H F P 7 I G 8 O D 1 N L 2 J B 4 K 9 C E 6 3 5 M A
+J O 9 4 8 M 6 5 N H C G K A 3 1 I D 2 7 P E L F B
+
+4 9 G 1 3 6 7 H 8 I 2 E 5 D C J A K B F L M N O P
+F 6 J 5 K N O 9 P B A 1 G H I D E L M C 2 7 3 8 4
+I L M N 2 F 3 G 4 C J K B O P 7 6 8 9 H 1 5 A D E
+8 A D H C J K L M E 3 4 7 9 N 2 1 5 O P B 6 F G I
+E 7 O P B D 2 1 A 5 6 F 8 L M 3 G I N 4 9 C H J K
+K N 1 J 6 4 H 8 I 9 P 7 3 B 2 L C F G 5 D A M E O
+O 8 7 9 M A B 2 5 6 F C L I D K H 4 E 1 J N G P 3
+P 4 F G 5 1 C 3 E D K 8 O 6 9 M 2 A J N 7 I B L H
+3 I E C L K M 7 J F G N H 4 A O B P 6 D 5 2 8 1 9
+2 H B D A O N P L G 1 5 J M E 8 9 3 7 I F 4 6 K C
+7 D 3 6 9 2 A I 1 M E B C G J H P O F L N K 4 5 8
+5 G 8 B H 9 F 6 3 O 4 D 1 P L E N C K 2 M J I A 7
+L 2 A E 1 8 5 4 K P M I N 7 6 9 D G 3 J O B C H F
+M J 4 F O H D C G N 5 A 9 8 K 6 7 1 I B E L P 3 2
+N K C I P L E B 7 J H 3 F 2 O 5 4 M 8 A G D 1 9 6
+1 B 6 8 4 P I M 9 K L 2 A J H G O 7 D E 3 F 5 C N
+9 C 5 K F B G D 2 7 8 P E 1 3 4 M N A 6 H O J I L
+A E 2 L J C 1 N H 3 D O 4 F G I 5 B P K 8 9 7 6 M
+D M H O 7 5 J A 6 8 C 9 I N B 1 F 2 L 3 K P E 4 G
+G P I 3 N E 4 F O L 7 6 M K 5 C J 9 H 8 A 1 2 B D
+6 1 K 2 D 7 L E C 4 O H P 3 F A 8 J 5 M I G 9 N B
+B 3 L A E I 9 J F 2 N M D 5 8 P K 6 4 G C H O 7 1
+C 5 N M G 3 P K B A 9 L 6 E 7 F I H 1 O 4 8 D 2 J
+H F P 7 I G 8 O D 1 B J 2 A 4 N L E C 9 6 3 K M 5
+J O 9 4 8 M 6 5 N H I G K C 1 B 3 D 2 7 P E L F A
+
+
+Total time: 00:00:01.1180000
+
+Strategy             Uses       Time
+Apply Changes        1212       00:00:00.0070000
+Only One Possibility 552        00:00:00.0610000
+Only One Place       210        00:00:00.6510000
+Twins                31         00:00:00.1260000
+Guess                449        00:00:00.2670000

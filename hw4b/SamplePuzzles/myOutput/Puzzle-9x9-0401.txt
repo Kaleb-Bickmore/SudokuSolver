@@ -1,0 +1,22 @@
+- - - - - 2 1 4 - 
+- - 1 - 9 - 5 3 - 
+- - 3 7 - - - 9 - 
+- - - 6 - - - 1 - 
+5 - - - - - - - 4 
+- 9 - - - 4 - - - 
+- 5 - - - 3 6 - - 
+- 6 9 - 2 - 3 - - 
+- 2 8 5 - - - - - 
+SOLVED: 9 7 5 8 6 2 1 4 3 
+6 8 1 4 9 7 5 3 2 
+2 4 3 7 5 6 8 9 1 
+7 3 2 6 8 9 4 1 5 
+5 1 6 9 3 8 7 2 4 
+8 9 7 3 1 4 2 5 6 
+1 5 4 2 7 3 6 8 9 
+4 6 9 1 2 5 3 7 8 
+3 2 8 5 4 1 9 6 7 
+TIME ELAPSED: 70369 MILLISECONDS; STRATEGIES USED: OnlyChoiceMethod TIMES USED: 1
+TwinsMethod TIMES USED: 1
+GuessMethod TIMES USED: 2
+TripletsMethod TIMES USED: 1

@@ -1,0 +1,24 @@
+25
+1 2 3 4 5 6 7 8 9 A B C D E F G H I J K L M N O P
+3 G - - - - A - - D - O K 2 - 1 7 E 6 - - M - F -
+- - - 9 8 E - - K 2 A - P - N - B - - - - - 6 5 -
+K - - 5 6 B - M - - - - - - 9 - - - - - - D J - -
+- - L - - O - - C G - 8 - - J F N - - - - E - - -
+M - 2 - D F - N P J 4 L B - G - I 3 K - - O 1 - -
+- - N L C - B O - - 1 6 3 I A M - 7 - - - F K H D
+- - 8 - - P - - L 6 G H N C - 5 - - - O - I - M 4
+B F - - 4 K - D H C 8 J 2 - - I 9 L - G - - - - -
+G 3 - A - - I - - - - - - - - B H F - D - - - 6 5
+I - 1 - O 3 - A - 5 - - F L M - - J 2 - 9 - - - B
+- 1 A - - - C - - - C - - - 4 7 3 2 - I - - H - 8
+- - - - - 7 - 9 - - - - M 8 I G - - 5 - 3 N - B -
+- C B - - - - - - 3 - - 1 - - K - - - - - - D L -
+- 9 - O K - M - - A 3 C 5 - - - - 6 - N - - - - -
+N - P - - 8 - L 6 E H - - - F - - - 4 - - - 9 J -
+A - - - 9 - K P - - L M 7 - - E - C - 8 G - 3 - O
+2 E - - - M - H 3 I - - - - - - - - P - - 9 - K L
+- - - - - 5 - 2 O 4 - - C H 3 6 G 1 - L N - - A J
+O N - D - C - - - L - P 4 J 8 3 A - - K - - F - -
+P M 3 J - - - E - 8 D K G N 1 - - 9 B - 6 C 4 - -
+- - I M - - N C 5 - K - 8 E 7 A 1 0 - 6 J - B - P
+Bad Puzzle

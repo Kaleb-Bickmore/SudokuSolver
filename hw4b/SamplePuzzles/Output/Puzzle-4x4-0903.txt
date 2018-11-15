@@ -1,0 +1,17 @@
+4
+1 2 3 4
+4 4 - 1
+- - - 2
+3 - - -
+- - 4 3
+
+Unsolvable
+
+Total time: 00:00:00
+
+Strategy             Uses       Time
+Apply Changes        1          00:00:00
+Only One Possibility 0          00:00:00
+Only One Place       0          00:00:00
+Twins                0          00:00:00
+Guess                0          00:00:00
