@@ -23,4 +23,4 @@ P M 3 J - - - E - 8 D K G N 1 - - 9 B - 6 C 4 - -
 - - 6 1 - - - - - - B - - - - - - M - F D A - - 7 
 - 8 9 - - - - - E - N - A - P L D - - C M H - - - 
 - L - 7 - - 8 J M F - 3 H D - 2 - - G - - - - C 1 
-UNSOLVABLE
+BAD BOARD

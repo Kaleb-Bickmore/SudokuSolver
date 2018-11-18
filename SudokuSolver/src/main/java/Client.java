@@ -8,10 +8,10 @@ public class Client {
          * @param args list of arguments put into our main class
          */
         public static void main(String[] args) {
-            args = new String[2];
+            args = new String[3];
             //args[0] ="-h";
             args[0] = "C:\\Users\\Kaleb\\Documents\\ObjectODesign\\CS5700HW4\\CS5700HW4\\hw4b\\SamplePuzzles\\input\\Puzzle-16x16-0301.txt";
-            args[1] = "C:\\Users\\Kaleb\\Documents\\ObjectODesign\\CS5700HW4\\CS5700HW4\\hw4b\\SamplePuzzles\\myOutput\\Puzzle-16x16-0301.txt";
+            //args[1] = "C:\\Users\\Kaleb\\Documents\\ObjectODesign\\CS5700HW4\\CS5700HW4\\hw4b\\SamplePuzzles\\myOutput\\Puzzle-16x16-0301.txt";
             if(args.length<=0){
                 System.out.println("Invalid command line arguments, try typing \"-h\" for the list of arguments.");
                 return;
@@ -42,7 +42,6 @@ public class Client {
                 File inputFile = new File(args[0]);
                 File outputFile = new File(args[1]);
                 File[] listOfInputFiles = new File[1];
-
                 listOfInputFiles[0] = inputFile;
                 ArrayList<SudokuPuzzle> SudokuPuzzles = new ArrayList<SudokuPuzzle>();
                 SudokuLoader myLoader = new SudokuLoader(listOfInputFiles);
@@ -58,6 +57,21 @@ public class Client {
             else{
                 System.out.println("Invalid command line arguments, try typing \"-h\" for the list of arguments.");
             }
+
+            File inputFile = new File("C:\\Users\\Kaleb\\Documents\\ObjectODesign\\CS5700HW4\\CS5700HW4\\hw4b\\SamplePuzzles\\input");
+            File outputFile = new File("C:\\Users\\Kaleb\\Documents\\ObjectODesign\\CS5700HW4\\CS5700HW4\\hw4b\\SamplePuzzles\\myOutput");
+            File[] listOfInputFiles = inputFile.listFiles();
+            ArrayList<SudokuPuzzle> SudokuPuzzles = new ArrayList<SudokuPuzzle>();
+            SudokuLoader myLoader = new SudokuLoader(listOfInputFiles);
+            SudokuPuzzles = myLoader.load();
+            SudokuSolver mySolver = new SudokuSolver(SudokuPuzzles);
+            ArrayList<SudokuPuzzle> SolvedPuzzles = mySolver.solve();
+            try {
+                myLoader.export(SolvedPuzzles, outputFile);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+
         }
 
 

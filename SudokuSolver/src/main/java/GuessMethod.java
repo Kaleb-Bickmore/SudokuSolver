@@ -1,8 +1,7 @@
 public class GuessMethod extends SolvingMethod {
     public GuessMethod(){
         this.guess = true;
-        this.onlyChoice = false;
-        this.triplets = false;
+        this.onlyChoice = true;
         this.twins = false;
     }
     @Override

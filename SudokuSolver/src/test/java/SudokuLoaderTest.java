@@ -31,6 +31,12 @@ public class SudokuLoaderTest {
         File myFile = new File(outputFolder.getPath()+"\\Puzzle-4x4-0001.txt");
         Scanner sc = new Scanner(myFile);
 
-        assertEquals("2 - 3 1 1 3 - 4 3 1 4 - - 2 1 3 NOT SOLVED YET",sc.nextLine());
+        assertEquals("2 - 3 1 ",sc.nextLine());
+        assertEquals("1 3 - 4 ",sc.nextLine());
+        assertEquals("3 1 4 - ",sc.nextLine());
+        assertEquals("- 2 1 3 ",sc.nextLine());
+        assertEquals("NOT SOLVED YET",sc.nextLine());
+
+
     }
 }

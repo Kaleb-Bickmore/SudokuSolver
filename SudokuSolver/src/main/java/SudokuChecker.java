@@ -1,3 +1,5 @@
+import org.omg.Messaging.SYNC_WITH_TRANSPORT;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 
@@ -28,6 +30,7 @@ public class SudokuChecker {
         int squareXStartingIndex = 0;
         int squareYStartingIndex = 0;
         int sizeOfSquare = (int)Math.sqrt(board.length);
+
         for(int i = 0; i <board.length;i++){
             if(i%sizeOfSquare == 0){
                 squareXStartingIndex = i;
@@ -64,27 +67,31 @@ public class SudokuChecker {
         String [] myCol = new String[board.length];
         for(int k = 0; k < board.length;k++){
             myCol[k] = board[k][j];
+
         }
         for(int l = 0;l<myRow.length;l++){
 
             if(myRow[l].equals(value)&&l!=j){
 
-                System.out.println("another one in the row");
+                //System.out.println("another one in the row");
                 return Boolean.FALSE;
             }
             if(myCol[l].equals(value)&&l!=i){
-                System.out.println("another one in the col");
+                //System.out.println("another one in the col");
                 return Boolean.FALSE;
 
             }
         }
-        for(int m = squareX;m<squareSize;m++){
-            for(int n = squareY;n<squareSize;n++){
-                if(board[m][n].equals(value)&&(m!=i||n!=j)){
-                    System.out.println("another one in the box");
-                    return Boolean.FALSE;
-                }
+        for(int m = squareX;m<squareX+squareSize;m++){
 
+            for(int n = squareY;n<squareY+squareSize;n++){
+
+                if(board[m][n].equals(value)) {
+                    if (m != i || n != j) {
+                        //    System.out.println("another one in the box");
+                        return Boolean.FALSE;
+                    }
+                }
             }
         }
 

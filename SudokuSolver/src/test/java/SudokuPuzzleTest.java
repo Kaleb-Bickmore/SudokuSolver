@@ -22,9 +22,8 @@ public class SudokuPuzzleTest {
         File myFile = new File("SomeFile.txt");
         SudokuPuzzle myPuzzle = new SudokuPuzzle(4,myBoard,myHash,myFile);
         ArrayList<String> strategiesUsed = new ArrayList<String>();
-        strategiesUsed.add("Twist");
-        myPuzzle.setStrategiesUsed(strategiesUsed);
-        assertEquals("Twist",myPuzzle.getStrategiesUsed().get(0));
+        myPuzzle.appendStrategy("Twist");
+        assertEquals(new Integer(1),myPuzzle.getStrategiesUsed().get("Twist"));
     }
 
 
@@ -42,7 +41,7 @@ public class SudokuPuzzleTest {
         File myFile = new File("SomeFile.txt");
         SudokuPuzzle myPuzzle = new SudokuPuzzle(4,myBoard,myHash,myFile);
         myPuzzle.appendStrategy("Twist");
-        assertEquals("Twist",myPuzzle.getStrategiesUsed().get(0));
+        assertEquals(new Integer(1),myPuzzle.getStrategiesUsed().get("Twist"));
     }
 
     @Test
@@ -58,8 +57,8 @@ public class SudokuPuzzleTest {
         }
         File myFile = new File("SomeFile.txt");
         SudokuPuzzle myPuzzle = new SudokuPuzzle(4,myBoard,myHash,myFile);
-        myPuzzle.addToTimeElasped(12.3);
-        assertEquals(12.3,myPuzzle.getTimeElasped(),.0001);
+        myPuzzle.addToTimeElasped(12);
+        assertEquals(12,myPuzzle.getTimeElasped(),.0001);
 
     }
 
@@ -237,7 +236,7 @@ public class SudokuPuzzleTest {
         myHash.put("B","B");
         myHash.put("C","C");
         myHash.put("D","D");
-        String myBoardFormatted = "A B C D A B C D A B C D A B C D ";
+        String myBoardFormatted = "A B C D \nA B C D \nA B C D \nA B C D \n";
         for(int i = 0; i<4;i++){
             myBoard[i] = new String[]{"A", "B", "C", "D"};
         }
@@ -245,13 +244,15 @@ public class SudokuPuzzleTest {
         SudokuPuzzle myPuzzle = new SudokuPuzzle(4,myBoard,myHash,myFile);
         assertEquals(myBoardFormatted+"NOT SOLVED YET",myPuzzle.solvedBoardExport());
         myPuzzle.setPossibleToSolve(Boolean.FALSE);
-        assertEquals(myBoardFormatted+"UNSOLVABLE",myPuzzle.solvedBoardExport());
+        assertEquals(myBoardFormatted+"BAD BOARD",myPuzzle.solvedBoardExport());
         myPuzzle.setSolvedBoard(myBoard);
         myPuzzle.appendStrategy("someStrategy");
         myPuzzle.appendStrategy("anotherStrategy");
 
-        assertEquals(myBoardFormatted+"SOLVED: "+myBoardFormatted+ "TIME ELAPSED: "+0.0
-                        +" STRATEGIES USED: someStrategy anotherStrategy ",myPuzzle.solvedBoardExport());
+        assertEquals(myBoardFormatted+"SOLVED: \n"+myBoardFormatted+ "TIME ELAPSED: 0 MILLISECONDS"
+                        +"\n STRATEGIES USED: \n" +
+                "someStrategy TIMES USED: 1\n" +
+                "anotherStrategy TIMES USED: 1\n",myPuzzle.solvedBoardExport());
 
 
     }

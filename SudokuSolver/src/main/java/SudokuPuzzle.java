@@ -1,6 +1,7 @@
 import java.io.File;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Stack;
 
 /**
  * This class represents a single Sudoku board in all its glory.
@@ -21,7 +22,9 @@ public class SudokuPuzzle {
     private HashMap<String,String> possibleBoardValues;
     private File fileName;
     private String[][] solvedBoard;
-
+    private Stack<String[][]> listOfPreviousStates;
+    private Stack<String[][]> listOfIndexesTried;
+    private String[][] currentListOfIndexes;
     /**
      *
      * @param boardSize the size of our board
@@ -38,6 +41,16 @@ public class SudokuPuzzle {
         this.solved = false;
         this.strategiesUsed = new HashMap<String, Integer>();
         this.timeElasped = 0;
+        this.listOfPreviousStates = new Stack<String[][]>();
+        String[][] emptyString = new String[boardSize][boardSize];
+        this.currentListOfIndexes = emptyString;
+        for(int i =0;i<boardSize;i++){
+            for(int j =0;j<boardSize;j++){
+                emptyString [i][j] = "";
+            }
+        }
+        this.listOfIndexesTried = new Stack<String[][]>();
+        this.listOfIndexesTried.push(emptyString);
     }
 
     /**
@@ -219,7 +232,7 @@ public class SudokuPuzzle {
                 for(String strategy: strategiesUsed.keySet()){
                     listOfStrategies = listOfStrategies + strategy + " TIMES USED: "+strategiesUsed.get(strategy)+"\n";
                 }
-                return (originalBoard+"SOLVED: "+solvedBoardFormatted+"TIME ELAPSED: "+this.timeElasped+" MILLISECONDS; STRATEGIES USED: "+
+                return (originalBoard+"SOLVED: \n"+solvedBoardFormatted+"TIME ELAPSED: "+this.timeElasped+" MILLISECONDS\n STRATEGIES USED: \n"+
                         listOfStrategies);
 
             }
@@ -230,8 +243,44 @@ public class SudokuPuzzle {
         }
         else{
 
-            return originalBoard+"UNSOLVABLE";
-        }
+            return originalBoard+"BAD BOARD";
         }
 
+        }
+    public String[][] getPreviousState() {
+        if(this.listOfPreviousStates.empty()){
+            String[][] newBoard = new String[boardSize][boardSize];
+            for(int i = 0;i<boardSize;i++){
+                for (int j=0;j<boardSize;j++){
+                    newBoard[i][j]="";
+                }
+            }
+            return newBoard;
+
+        }
+        this.currentListOfIndexes = this.listOfIndexesTried.pop();
+        return this.listOfPreviousStates.pop();
+    }
+
+    public void saveState(String[][] solvedBoard) {
+        this.listOfPreviousStates.push(solvedBoard);
+    }
+
+    public String[][] getListOfIndexesTried() {
+        return this.currentListOfIndexes;
+    }
+    public void addToIndexesNotInBoard(int i, int j, String s) {
+
+        if(this.currentListOfIndexes[i][j].equals("")){
+            this.currentListOfIndexes[i][j] = s;
+        }
+        else{
+            this.currentListOfIndexes[i][j] = s+"-"+this.currentListOfIndexes[i][j];
+        }
+        String [][] copy = new String[currentListOfIndexes.length][currentListOfIndexes.length];
+        for(int k =0;k<this.currentListOfIndexes.length;k++){
+            copy[k] = this.currentListOfIndexes[k].clone();
+        }
+        this.listOfIndexesTried.push(copy);
+    }
 }

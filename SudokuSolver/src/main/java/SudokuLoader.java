@@ -11,7 +11,8 @@ public class SudokuLoader {
     public ArrayList<SudokuPuzzle> load() {
         ArrayList<SudokuPuzzle> allSudokuPuzzles = new ArrayList<SudokuPuzzle>();
 
-        for(File myFile : listOfFiles) {
+        files: for(File myFile : listOfFiles) {
+            System.out.println(myFile.getAbsolutePath());
             HashMap<String, String> possibleSudokuValues = new HashMap<String,String>();
 
             try {
@@ -25,8 +26,13 @@ public class SudokuLoader {
                 for (int i = 0; i < boardSize; i++) {
                     String[] boardRow = new String[boardSize];
                     for (int j = 0; j < boardSize; j++) {
-                        boardRow[j] = sc.next();
-                    }
+                        try {
+                            boardRow[j] = sc.next();
+                        }catch (Exception e){
+                          System.out.println("bad Puzzle: " + myFile.getAbsolutePath());
+                          continue files;
+                        }
+                        }
                     myBoard[i] = boardRow;
                 }
                 allSudokuPuzzles.add(new SudokuPuzzle(boardSize, myBoard, possibleSudokuValues,myFile));

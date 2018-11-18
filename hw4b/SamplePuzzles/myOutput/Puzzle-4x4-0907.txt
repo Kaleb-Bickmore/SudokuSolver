@@ -1,0 +1,5 @@
+B - C A 
+A C - D 
+C A D - 
+- D A C 
+BAD BOARD
