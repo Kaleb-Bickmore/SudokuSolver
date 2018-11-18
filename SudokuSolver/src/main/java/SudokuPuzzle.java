@@ -62,14 +62,6 @@ public class SudokuPuzzle {
     }
 
     /**
-     * set the strategy to an arraylist of strategies
-     * @param strategiesUsed
-     */
-    public void setStrategiesUsed(HashMap<String,Integer> strategiesUsed) {
-        this.strategiesUsed = strategiesUsed;
-    }
-
-    /**
      *
      * @param strategyUsed a single strategy used to solve the board
      */

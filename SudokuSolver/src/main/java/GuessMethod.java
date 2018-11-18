@@ -6,6 +6,6 @@ public class GuessMethod extends SolvingMethod {
     }
     @Override
     public String toString() {
-        return "GuessMethod";
+        return "BackTrack";
     }
 }

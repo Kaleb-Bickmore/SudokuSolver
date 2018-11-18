@@ -180,15 +180,5 @@ public class SudokuCheckerTest {
         board[5][4]="";
         assertEquals(Boolean.FALSE,SudokuChecker.checkNotEmpty(board));
     }
-    private void displayBoard(String[][] solvedBoard) {
-        System.out.println("----------------------");
-        for (int i = 0; i < solvedBoard.length; i++) {
-            for (int j = 0; j < solvedBoard.length; j++) {
-                System.out.print(solvedBoard[i][j]);
-            }
-            System.out.println("");
-        }
-        System.out.println("----------------------");
-    }
 
 }

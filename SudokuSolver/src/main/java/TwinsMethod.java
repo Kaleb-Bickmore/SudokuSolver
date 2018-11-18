@@ -7,6 +7,6 @@ public class TwinsMethod extends SolvingMethod {
     }
     @Override
     public String toString() {
-        return "TwinsMethod";
+        return "Twins";
     }
 }

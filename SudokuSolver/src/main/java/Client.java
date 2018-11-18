@@ -8,9 +8,9 @@ public class Client {
          * @param args list of arguments put into our main class
          */
         public static void main(String[] args) {
-            args = new String[3];
+            //args = new String[3];
             //args[0] ="-h";
-            args[0] = "C:\\Users\\Kaleb\\Documents\\ObjectODesign\\CS5700HW4\\CS5700HW4\\hw4b\\SamplePuzzles\\input\\Puzzle-16x16-0301.txt";
+            //args[0] = "C:\\Users\\Kaleb\\Documents\\ObjectODesign\\CS5700HW4\\CS5700HW4\\hw4b\\SamplePuzzles\\input\\Puzzle-16x16-0301.txt";
             //args[1] = "C:\\Users\\Kaleb\\Documents\\ObjectODesign\\CS5700HW4\\CS5700HW4\\hw4b\\SamplePuzzles\\myOutput\\Puzzle-16x16-0301.txt";
             if(args.length<=0){
                 System.out.println("Invalid command line arguments, try typing \"-h\" for the list of arguments.");
@@ -58,8 +58,13 @@ public class Client {
                 System.out.println("Invalid command line arguments, try typing \"-h\" for the list of arguments.");
             }
 
-            File inputFile = new File("C:\\Users\\Kaleb\\Documents\\ObjectODesign\\CS5700HW4\\CS5700HW4\\hw4b\\SamplePuzzles\\input");
-            File outputFile = new File("C:\\Users\\Kaleb\\Documents\\ObjectODesign\\CS5700HW4\\CS5700HW4\\hw4b\\SamplePuzzles\\myOutput");
+
+//            }
+
+        }
+        public void loadDirectory(String [] args) {
+            File inputFile = new File(args[0]);
+            File outputFile = new File(args[1]);
             File[] listOfInputFiles = inputFile.listFiles();
             ArrayList<SudokuPuzzle> SudokuPuzzles = new ArrayList<SudokuPuzzle>();
             SudokuLoader myLoader = new SudokuLoader(listOfInputFiles);
@@ -71,7 +76,6 @@ public class Client {
             } catch (IOException e) {
                 e.printStackTrace();
             }
-
         }
 
 

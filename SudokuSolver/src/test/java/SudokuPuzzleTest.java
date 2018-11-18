@@ -256,4 +256,21 @@ public class SudokuPuzzleTest {
 
 
     }
+    @Test
+    public  void testSetPossibleToSolve(){
+        String[][]myBoard = new String[4][4];
+        HashMap<String,String> myHash = new HashMap<String, String>();
+        myHash.put("A","A");
+        myHash.put("B","B");
+        myHash.put("C","C");
+        myHash.put("D","D");
+        for(int i = 0; i<4;i++){
+            myBoard[i] = new String[]{"A", "B", "C", "D"};
+        }
+        File myFile = new File("SomeFile.txt");
+        SudokuPuzzle myPuzzle = new SudokuPuzzle(4,myBoard,myHash,myFile);
+        myPuzzle.setPossibleToSolve(Boolean.FALSE);
+        assertEquals(Boolean.FALSE,myPuzzle.getPossibleToSolve());
+        assertEquals(Boolean.FALSE,myPuzzle.getSolved());
+    }
 }

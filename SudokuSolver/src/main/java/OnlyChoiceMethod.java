@@ -6,6 +6,6 @@ public class OnlyChoiceMethod extends SolvingMethod {
     }
     @Override
     public String toString() {
-        return "OnlyChoiceMethod";
+        return "OnlyChoice";
     }
 }

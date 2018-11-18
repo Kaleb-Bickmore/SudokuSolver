@@ -12,6 +12,8 @@ public class SolvingMethodTest {
     @Test
     public void solve() {
         SolvingMethod onlyChoiceMethod = new OnlyChoiceMethod();
+        assertEquals("OnlyChoice",onlyChoiceMethod.toString());
+
         File [] inputFiles= new File[1];
         inputFiles[0] = new File("C:\\Users\\Kaleb\\Documents\\ObjectODesign\\CS5700HW4\\CS5700HW4\\hw4b\\SamplePuzzles\\input\\Puzzle-9x9-0201.txt");
         SudokuLoader myLoader =  new SudokuLoader(inputFiles);
@@ -19,6 +21,7 @@ public class SolvingMethodTest {
         String[][] puzzle = onlyChoiceMethod.solve(myPuzzle.get(0).getBoard(),myPuzzle.get(0).getPossibleBoardValues(),myPuzzle.get(0));
         assertEquals(Boolean.FALSE,compareBoards(myPuzzle.get(0).getBoard(),puzzle));
         SolvingMethod guessMethod = new GuessMethod();
+        assertEquals("BackTrack",guessMethod.toString());
         String[][] solvedPuzzle = guessMethod.solve(myPuzzle.get(0).getBoard(),myPuzzle.get(0).getPossibleBoardValues(),myPuzzle.get(0));
         solvedPuzzle = guessMethod.solve(myPuzzle.get(0).getBoard(),myPuzzle.get(0).getPossibleBoardValues(),myPuzzle.get(0));
         solvedPuzzle = guessMethod.solve(solvedPuzzle,myPuzzle.get(0).getPossibleBoardValues(),myPuzzle.get(0));
@@ -44,12 +47,45 @@ public class SolvingMethodTest {
         assertArrayEquals(solvedPuzzle[6],solvedPuzzle[6]);
         assertArrayEquals(solvedPuzzle[7],solvedPuzzle[7]);
         assertArrayEquals(solvedPuzzle[8],solvedPuzzle[8]);
-
+        HashMap<String,String> possibleValues = new HashMap<String, String>();
+        possibleValues.put("1","1");
+        possibleValues.put("2","2");
+        possibleValues.put("3","3");
+        possibleValues.put("4","4");
+        possibleValues.put("5","5");
+        possibleValues.put("6","6");
+        possibleValues.put("7","7");
+        possibleValues.put("8","8");
+        possibleValues.put("9","9");
+        String [] row10 = {"1","2","3","-","-","-","-","-","-"};
+        String [] row11 = {"-","7","5","4","-","-","-","-","9"};
+        String [] row12 = {"8","4","6","-","-","-","-","-","-"};
+        String [] row13 = {"7","-","-","-","-","-","-","-","-"};
+        String [] row14 = {"6","-","-","-","-","-","-","-","-"};
+        String [] row15 = {"5","-","-","-","-","-","-","-","-"};
+        String [] row16 = {"4","-","-","-","-","-","-","-","-"};
+        String [] row17 = {"3","-","-","-","-","-","-","-","-"};
+        String [] row18 = {"2","-","-","-","-","-","-","-","-"};
+        String [][] guessBoard = new String[9][9];
+        guessBoard [0]= row10;
+        guessBoard [1]= row11;
+        guessBoard [2]= row12;
+        guessBoard [3]= row13;
+        guessBoard [4]= row14;
+        guessBoard [5]= row15;
+        guessBoard [6]= row16;
+        guessBoard [7]= row17;
+        guessBoard [8]= row18;
+        SudokuPuzzle newPuzzle = new SudokuPuzzle(9,guessBoard,possibleValues,new File("someFile.txt"));
+        String[][] badPuzzle = guessMethod.solve(guessBoard,newPuzzle.getPossibleBoardValues(),newPuzzle);
+        assertEquals(Boolean.FALSE,SudokuChecker.checkNotEmpty(badPuzzle));
     }
 
     @Test
     public void useTwinsToEliminate() {
         SolvingMethod myTwin = new TwinsMethod();
+        assertEquals("Twins",myTwin.toString());
+
         String [] row0 = {"6","3","9","-","-","8","-","-","4"};
         String [] row1 = {"-","8","7","-","-","4","-","-","9"};
         String [] row2 = {"-","2","4","-","-","-","3","8","-"};
@@ -107,33 +143,52 @@ public class SolvingMethodTest {
         board = myTwin.fillWithDashes(9,board);
         displayBoard(board);
         assertEquals(false,compareBoards(originalBoard,board));
+
+        String [] row101 = {"-","1","3","-","-","-","-","-","9"};
+        String [] row111 = {"5","-","6","-","-","-","-","-","-"};
+        String [] row121 = {"2","4","-","-","-","9","-","-","-"};
+        String [] row131 = {"-","-","-","-","-","-","-","-","-"};
+        String [] row141 = {"-","-","-","-","-","-","-","-","-"};
+        String [] row151 = {"-","-","-","-","-","-","-","-","-"};
+        String [] row161 = {"-","-","-","-","-","-","-","-","-"};
+        String [] row171 = {"-","-","-","-","-","-","-","-","-"};
+        String [] row181 = {"-","-","-","-","-","-","-","-","-"};
+        String [][] squareTestBoard = new String[9][9];
+        squareTestBoard [0]= row101;
+        squareTestBoard [1]= row111;
+        squareTestBoard [2]= row121;
+        squareTestBoard [3]= row131;
+        squareTestBoard [4]= row141;
+        squareTestBoard [5]= row151;
+        squareTestBoard [6]= row161;
+        squareTestBoard [7]= row171;
+        squareTestBoard [8]= row181;
+        SudokuPuzzle squarePuzzleTwin = new SudokuPuzzle(9,squareTestBoard,possibleValues,new File("someOtherFile.txt"));
+        String[][] solveBoard = myTwin.solve(squareTestBoard,possibleValues,squarePuzzleTwin);
+
+        String [] row1011 = {"-","1","3","-","-","-","-","-","9"};
+        String [] row1111 = {"5","9","6","-","-","-","-","-","-"};
+        String [] row1211 = {"2","4","-","-","-","9","-","-","-"};
+        String [] row1311 = {"-","-","-","-","-","-","-","-","-"};
+        String [] row1411 = {"-","-","-","-","-","-","-","-","-"};
+        String [] row1511 = {"-","-","-","-","-","-","-","-","-"};
+        String [] row1611 = {"-","-","-","-","-","-","-","-","-"};
+        String [] row1711 = {"-","-","-","-","-","-","-","-","-"};
+        String [] row1811 = {"-","-","-","-","-","-","-","-","-"};
+        String [][] testSquareTestBoard = new String[9][9];
+        testSquareTestBoard [0]= row1011;
+        testSquareTestBoard [1]= row1111;
+        testSquareTestBoard [2]= row1211;
+        testSquareTestBoard [3]= row1311;
+        testSquareTestBoard [4]= row1411;
+        testSquareTestBoard [5]= row1511;
+        testSquareTestBoard [6]= row1611;
+        testSquareTestBoard [7]= row1711;
+        testSquareTestBoard [8]= row1811;
+        assertEquals(Boolean.TRUE,compareBoards(testSquareTestBoard,solveBoard));
     }
 
-    @Test
-    public void twinEliminateRow() {
-
-    }
-
-    @Test
-    public void twinEliminateCol() {
-    }
-
-    @Test
-    public void checkRows() {
-    }
-
-    @Test
-    public void fillBoardWithPossibleValues() {
-    }
-
-    @Test
-    public void possibleValues() {
-    }
-
-    @Test
-    public void toStringTest() {
-    }
-    protected boolean compareBoards(String[][] firstBoard,String [] [] secondBoard){
+    private boolean compareBoards(String[][] firstBoard,String [] [] secondBoard){
         if(firstBoard.length!=secondBoard.length){
             return Boolean.FALSE;
         }

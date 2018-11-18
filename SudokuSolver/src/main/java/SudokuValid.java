@@ -1,17 +1,20 @@
-public class SudokuNotInvalid implements SudokuSolvingStrategy{
+public class SudokuValid implements SudokuSolvingStrategy{
     @Override
     public int checkOnPuzzle(SudokuPuzzle myPuzzle, String[][] solvedBoard,String [] []copySolvedBoard,int i) {
         if (SudokuChecker.checkCellsFilled(solvedBoard)) {
             System.out.println("Solved...");
             myPuzzle.setSolvedBoard(solvedBoard);
         }
-        if (compareBoards(solvedBoard, copySolvedBoard)) {
+        else if (compareBoards(solvedBoard, copySolvedBoard)) {
+
                 i = ((i) % 3) + 1;
+
         }
         return i;
 
     }
-        public boolean compareBoards(String[][] firstBoard,String [] [] secondBoard){
+        private boolean compareBoards(String[][] firstBoard,String [] [] secondBoard){
+
             if(firstBoard.length!=secondBoard.length){
                 return Boolean.FALSE;
             }

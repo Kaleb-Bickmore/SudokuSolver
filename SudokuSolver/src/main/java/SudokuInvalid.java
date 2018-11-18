@@ -19,16 +19,4 @@ public class SudokuInvalid implements SudokuSolvingStrategy {
         }
 
     }
-    public static void displayBoard(String[][] solvedBoard) {
-        System.out.println("----------------------");
-        if(solvedBoard!=null) {
-            for (int i = 0; i < solvedBoard.length; i++) {
-                for (int j = 0; j < solvedBoard.length; j++) {
-                    System.out.print(solvedBoard[i][j]);
-                }
-                System.out.println("");
-            }
-            System.out.println("----------------------");
-        }
-    }
 }
